@@ -1,5 +1,5 @@
 from domain.services.controllers.database_controller import DatabaseController
-
+from domain.models import User
 
 class UserRepository:
     def create_user(self, user: User, database_controller: DatabaseController):
