@@ -5,7 +5,7 @@ from domain.models import DependencyInjection, Injection
 from domain.services.controllers import *
 from domain.services.controllers import *
 
-class CoreBridge:
+class CoreBridgeAdapter:
     def __init__(self):
         self.adapters = {
             "database_controller_postgres": DatabaseControllerPostgres(),
