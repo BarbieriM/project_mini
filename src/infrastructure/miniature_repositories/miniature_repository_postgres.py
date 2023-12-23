@@ -4,9 +4,9 @@ from domain.services.controllers.database_controller import DatabaseController
 
 
 class MiniatureRepositoryPostgres(MiniatureRepository):
-    def create_miniature(self, miniature: Miniature, database_controller: DatabaseController):
+    def create_miniature(self, miniature: Miniature, database_controller: DatabaseController)->Miniature:
         database_controller.execute("INSERT INTO miniatures (id, image, name, size, type) VALUES (%s)", (miniature, ))
 
-    def get_all_miniatures(self, database_controller: DatabaseController) -> Miniature:
+    def get_all_miniatures(self, database_controller: DatabaseController) -> list[Miniature]:
         miniatures = database_controller.execute("SELECT * from miniatures")
         return [Miniature(**miniature_data) for miniature_data in miniatures]

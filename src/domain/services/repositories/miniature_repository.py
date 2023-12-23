@@ -8,5 +8,5 @@ class MiniatureRepository:
     def get_miniature(self, name: str, database_controller: DatabaseController) -> Miniature:
         raise NotImplementedError()
     
-    def get_all_miniatures(self, database_controller:DatabaseController)->list[str]:
+    def get_all_miniatures(self, database_controller:DatabaseController)->list[Miniature]:
         raise NotImplementedError()

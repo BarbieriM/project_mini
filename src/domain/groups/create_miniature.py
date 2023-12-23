@@ -4,7 +4,7 @@ from infrastructure.core_dependency_injection_factories.core_dependency_injectio
 from src.infrastructure.core_bridge_adapters import CoreBridgeAdapter
 from domain.usecases import GetInjection
 
-def create_miniature_group()->Miniature:
+def create_miniature_group(id: int, image:str, name:str, type:str, size:str,)->Miniature:
     core_dependency_injection_factory = CoreDependencyInjectionFactoryJson()
     core_bridge = CoreBridgeAdapter()
 
@@ -17,7 +17,9 @@ def create_miniature_group()->Miniature:
         injection.database_connection_factory
     )
 
-    database_controller.call()
+    database_controller = database_controller.call()
+
+    database_controller.execute()
 
     
 
