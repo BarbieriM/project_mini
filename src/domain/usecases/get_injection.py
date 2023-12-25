@@ -4,6 +4,7 @@ from domain.services.factories import CoreDependencyInjectionFactory
 
 
 class GetInjection:
+    # recebe só as classes como parametro e nao seus retornos
     def __init__(
         self,
         core_bridge: CoreBridge,

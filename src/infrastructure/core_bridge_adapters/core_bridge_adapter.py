@@ -11,6 +11,9 @@ class CoreBridgeAdapter:
             "database_controller_postgres": DatabaseControllerPostgres(),
             "database_controller_factory_postgres": DatabaseControllerFactoryPostgrees(),
         }
+        #se eu tivesse outros adapters pra outro tipo de banco eu iria colocar eles aqui tambem?
+        #  
+
     def get_injection(self, dependency_injection:DependencyInjection)-> Injection:
         return Injection(
             self.adapters[dependency_injection.database_controller],
