@@ -1,1 +1,1 @@
-from src.domain.services.bridges.core_bridge import CoreBridge
+from domain.services.bridges.core_bridge import CoreBridge

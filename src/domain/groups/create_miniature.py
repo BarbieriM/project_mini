@@ -7,7 +7,7 @@ import uuid
 import json
 from infrastructure.miniature_factories.miniature_factory_json import MiniatureFactoryJson
 from domain.usecases import CreateMiniature
-from domain.services.repositories import MiniatureRepository
+from infrastructure.miniature_repositories.miniature_repository_postgres import MiniatureRepositoryPostgres
 
 
 def create_miniature_group() -> Miniature:
@@ -40,7 +40,7 @@ def create_miniature_group() -> Miniature:
     )
 # gambiarr
     with open(
-        "C:\Users\Mateus\dev\project_mini\utils\mini_test.json",
+        "C:\\Users\\Mateus\\dev\\project_mini\\utils\\mini_test.json",
         "r",
     ) as f:
         miniature_info = json.load(f)
@@ -49,6 +49,6 @@ def create_miniature_group() -> Miniature:
     # miniature = MiniatureFactoryJson()
 # fazer um usecase para criar miniatura que recebe um instancia de miniature factory como parametro e tenho que colocar no core bridge adapter e nas injectrions q sera usado o json
 
-    miniature_repository = MiniatureRepository()
-    create_miniature = miniature_repository.create_miniature(
+    miniature_repository = MiniatureRepositoryPostgres()
+    return miniature_repository.create_miniature(
         miniature, database_controller)

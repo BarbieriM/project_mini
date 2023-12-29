@@ -1,1 +1,1 @@
-from database_controller import DatabaseController
+from domain.services.controllers.database_controller import DatabaseController
