@@ -2,7 +2,7 @@ from dataclasses import dataclass
 
 @dataclass
 class Miniature:
-    id: int
+    id: str
     image:str
     name:str
     type:str

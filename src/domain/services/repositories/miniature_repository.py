@@ -2,7 +2,7 @@ from domain.services.controllers.database_controller import DatabaseController
 from domain.models import Miniature
 
 class MiniatureRepository:
-    def create_miniature(self, miniature: Miniature, database_controller: DatabaseController)->Miniature:
+    def create_miniature(self, miniature: Miniature, database_controller: DatabaseController)->str:
         raise NotImplementedError()
     
     def get_miniature(self, name: str, database_controller: DatabaseController) -> Miniature:

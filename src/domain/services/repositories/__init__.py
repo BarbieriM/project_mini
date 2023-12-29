@@ -1,0 +1,2 @@
+from domain.services.repositories.miniature_repository import MiniatureRepository
+from domain.services.repositories.user_repository import UserRepository

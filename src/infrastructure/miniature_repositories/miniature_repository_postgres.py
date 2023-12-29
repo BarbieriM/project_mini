@@ -4,8 +4,13 @@ from domain.services.controllers.database_controller import DatabaseController
 
 
 class MiniatureRepositoryPostgres(MiniatureRepository):
-    def create_miniature(self, miniature:Miniature, database_controller: DatabaseController)->Miniature:
-        database_controller.execute("INSERT INTO miniatures (id, image, name, size, type) VALUES (%s)", (miniature, ))
+    def create_miniature(self, miniature: Miniature, database_controller: DatabaseController) -> str:
+        try:
+            database_controller.execute("INSERT INTO miniatures (id, image, name, size, type) VALUES (%s)", ((
+                miniature.id, miniature.image, miniature.name, miniature.size, miniature.type), ))
+            return "Miniature created"
+        except:
+            return "erro"
 
         # devo colocar os parametros de Miniature ou a dataclass Miniature em si? afinal eu to retornando um Miniature
 

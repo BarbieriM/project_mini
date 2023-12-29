@@ -1,2 +1,3 @@
 from domain.usecases.get_database_controller import GetDatabaseController
 from domain.usecases.get_injection import GetInjection
+from domain.usecases.create_miniature import CreateMiniature

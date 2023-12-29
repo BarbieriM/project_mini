@@ -1,6 +1,7 @@
 {
     "database_connection_factory":"database_connection_factory_postgres",
     "database_controller_factory":"database_controller_factory_postgres",
-    "database_controller":"database_controller_factory_postgres"
+    "database_controller":"database_controller_factory_postgres",
+    "miniature_factory":"miniature_factory_json"
 
 }

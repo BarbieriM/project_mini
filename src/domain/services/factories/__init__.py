@@ -1,3 +1,4 @@
 from domain.services.factories.database_controller_factory import DatabaseControllerFactory
 from domain.services.factories.core_dependency_injection_factory import CoreDependencyInjectionFactory
 from domain.services.factories.create_miniature_factory import CreateMiniatureFactory
+from domain.services.factories.miniature_factory import MiniatureFactory
