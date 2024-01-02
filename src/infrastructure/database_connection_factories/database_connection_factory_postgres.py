@@ -7,12 +7,12 @@ import psycopg
 
 
 class DatabaseConnectionFactoryPostgres(DatabaseConnectionFactory):
-    def call(database_settings: DatabaseSettings) -> DatabaseControllerFactory:
+    def call(self, database_settings: DatabaseSettings) -> DatabaseControllerFactory:
         connection = psycopg.connect(
             host=database_settings.host,
-            dbname=database_settings.name,
+            dbname=database_settings.user,
             user=database_settings.user,
-            password=database_settings.pasw,
+            password=database_settings.password,
             port=database_settings.port,
         )
 

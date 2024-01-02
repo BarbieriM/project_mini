@@ -9,5 +9,5 @@ class CreateMiniature:
     ):
         self.miniature_factory = miniature_factory
 
-    def call(self, id: str, image: str, name: str, type: str, size: str) -> Miniature:
-        return self.miniature_factory.call(id, image, name, type, size)
+    def call(self, image: str, name: str, type: str, size: str) -> Miniature:
+        return self.miniature_factory.call( image, name, type, size)

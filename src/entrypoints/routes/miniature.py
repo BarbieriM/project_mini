@@ -8,4 +8,4 @@ miniature_router = APIRouter()
 
 @miniature_router.get('/miniature/create')
 def create_miniature_route():
-    return
+    return create_miniature_group()

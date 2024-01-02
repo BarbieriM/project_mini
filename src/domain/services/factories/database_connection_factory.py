@@ -3,5 +3,5 @@ from domain.services.factories.database_controller_factory import DatabaseContro
 
 
 class DatabaseConnectionFactory:
-    def call(database_settings: DatabaseSettings) -> DatabaseControllerFactory:
+    def call(self, database_settings: DatabaseSettings) -> DatabaseControllerFactory:
         raise NotImplementedError()
